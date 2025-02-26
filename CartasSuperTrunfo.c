@@ -3,7 +3,7 @@
 int main(){
     char estado1 [30], estado2 [30], codigo1 [30], codigo2 [30],cidade1 [30], cidade2 [30]; 
     int pop1, pop2, pontos1, pontos2;
-    float area1, area2, pib1, pib2;
+    float area1, area2, pib1, pib2, dens1, dens2, percap1, percap2;
 
     printf("  \n **** Dados da Primeira Carta **** \n");
 
@@ -21,6 +21,9 @@ int main(){
 
     printf("Entre com o tamanho da area da cidade: \n");
     scanf("%f", &area1);
+
+    printf("Entre com a Densidade da cidade: \n");
+    scanf("%f", &dens1);
 
     printf("Entre com o PIb da cidade: \n");
     scanf("%f", &pib1);
@@ -45,6 +48,9 @@ int main(){
     printf("Entre com o tamanho da area da cidade: \n");
     scanf("%f",&area2);
 
+    printf("Entre com a Densidade da cidade: \n");
+    scanf("%f", &dens2);
+
     printf("Entre com o PIb da cidade: \n");
     scanf("%f",&pib2);
 
@@ -57,9 +63,11 @@ int main(){
     printf(" O Codigo é: %s \n", codigo1);
     printf(" A cidade é: %s \n", cidade1);
     printf(" A população é: %d \n", pop1);
-    printf(" A aréa é: %f \n", area1);
-    printf(" O PIB é: %f \n", pib1);
+    printf(" A aréa é : %f \n", area1);
+    printf(" A Densidade da população é: %f \n", dens1);
+    printf(" O PIB é : %f \n", pib1);
     printf(" A quantidade de pontos turisticos é: %d \n", pontos1);
+
 
 
     printf("Os dados da Segunda carta são:  \n");
@@ -67,10 +75,51 @@ int main(){
     printf(" O Codigo é: %s \n", codigo2);
     printf(" A cidade é: %s  \n", cidade2);
     printf(" A população é: %d  \n", pop2);
-    printf(" A aréa é: %f \n", area2);
-    printf(" O PIB é: %f \n", pib2);
+    printf(" A aréa é : %f \n", area2);
+    printf(" A Densidade da população é: %f \n", dens2);
+    printf(" O PIB é : %f \n", pib2);
     printf(" A quantidade de pontos turisticos é: %d  \n", pontos2);
+
+
+    printf("A desnidade populacional da primeira cidade é:\n");
+
+
+    dens1 = (float)  pib1/area1;
+
+    printf( "%.2f\n", dens1);
+
+    printf("Pib percapito da primeira cidade é: \n");
+
+    percap1 = (float) pib1/pop1;
+
+    printf("%.2F\n", percap1);
+
+
+    printf("A desnidade populacional da segunda cidade é:\n");
+
+    dens1 = (float)  pib2/area2;
+
+    printf( "%.2f\n", dens2);
+
+    printf("Pib percapito da segunda cidade é: \n");
+
+    percap1 = (float) pib2/pop2;
+
+    printf("%.2F\n", percap2);
+ 
+
+    printf(" Cidade Aracaju(Se) é: %f \n", dens1);
+    printf(" Cidade Própria(Se) é: %f \n", dens2);
+
+    if (pop1 > pop2){
+        printf("A Cidade de Aracaju (SE) venceu!:\n");
+        } else {
+            printf("A Cidade de Própria (SE) venceu!");
+            }
+
     
+    
+
     
     return 0;
 
